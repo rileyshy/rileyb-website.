@@ -39,7 +39,7 @@
                         <img src="img/logo.png" alt="Featured Content 2">
                         <h3>Latest Video</h3>
                         <p>Check out the latest video on Riley B's YouTube channel.</p>
-                        <a href="docs.html" class="btn">Watch now</a>
+                        <button id="latest-video-btn" class="btn">Watch now</button>
                     </div>
                 </div>
             </div>
@@ -50,12 +50,12 @@
                 <h2>Recent Posts</h2>
                 <div class="posts-grid">
                     <div class="post-item">
-                        <h3>Post Title 1</h3>
+                        <h3>Sections</h3>
                         <p>A brief summary of the recent post or blog entry.</p>
                         <a href="docs.html" class="btn">Read more</a>
                     </div>
                     <div class="post-item">
-                        <h3>Post Title 2</h3>
+                        <h3>Sections</h3>
                         <p>A brief summary of the recent post or blog entry.</p>
                         <a href="docs.html" class="btn">Read more</a>
                     </div>
@@ -67,12 +67,23 @@
             <div class="cta-container">
                 <h2>Join the Community</h2>
                 <p>Connect with like-minded individuals, share your ideas, and collaborate on exciting projects.</p>
-                <a href="https://discord.gg/londonlegacy" class="btn" target="_blank">Join the Discord Server</a>
+                <a href="https://discord.gg/M37ruKh49b" class="btn" target="_blank">Join the Discord Server</a>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Riley B. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Get the button element
+        var latestVideoBtn = document.getElementById("latest-video-btn");
+
+        // Add click event listener to the button
+        latestVideoBtn.addEventListener("click", function() {
+            // Redirect to the YouTube channel URL
+            window.location.href = "https://www.youtube.com/@RileyB-Community";
+        });
+    </script>
 </body>
 </html>
