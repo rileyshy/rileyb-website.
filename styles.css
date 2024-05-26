@@ -2,13 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
+    background-color: #121212;
+    color: white;
 }
 
 header {
-    position: absolute;
+    position: fixed;
+    top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -39,8 +41,69 @@ nav ul li a:hover {
 }
 
 main {
-    height: 100vh;
-    position: relative; /* Set main to relative positioning */
+    position: relative;
+    min-height: 100vh;
+    padding-top: 80px; /* Add padding to avoid content overlap with header */
+}
+
+.home-container {
+    text-align: center;
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#featured-content, #recent-posts, #call-to-action {
+    padding: 2em;
+    text-align: center;
+}
+
+.content-container, .posts-container, .cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-grid, .posts-grid {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content-item, .post-item {
+    background-color: #1f1f1f;
+    padding: 1em;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.content-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
 }
 
 .video-container {
@@ -93,26 +156,54 @@ main {
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); /* White glow */
 }
 
-.more-info {
-    color: white;
-    font-size: 18px;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
+.about-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-footer {
+/* Styles for the docs page */
+.docs-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.docs-nav {
+    flex: 1;
+    padding-right: 2em;
+    order: -1; /* Move the navigation to the left side */
+}
+
+.docs-nav select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1em;
+}
+
+.docs-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav ul li {
+    margin-bottom: 1em;
+}
+
+.docs-nav ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+}
+
+.docs-nav ul li a:hover {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    width: 100%;
-}
-
-/* New styles added */
-
-form {
-    display: none; /* Hide the form on Home page */
 }
