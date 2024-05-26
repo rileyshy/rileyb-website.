@@ -173,8 +173,9 @@ footer {
 }
 
 .docs-nav {
-    flex: 1;
-    padding-right: 2em;
+    flex: 0 0 auto; /* Remove the flex-grow property */
+    width: 150px; /* Set a specific width */
+    padding-right: 1em; /* Adjust padding */
     order: -1; /* Move the navigation to the left side */
 }
 
