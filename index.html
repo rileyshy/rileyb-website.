@@ -7,49 +7,72 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="https://www.rileyb.shop" target="_blank">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section id="home">
-            <div class="video-container">
-                <div id="tinted-overlay">
-                    <p>Click to Enter</p>
-                </div>
-                <div id="player"></div>
-                <div class="info-box">
-                    <h2>Riley B</h2>
-                    <p>Email: rb@rileyb.co.uk</p>
-                    <p>Discord: rileyshy08</p>
-                    <p>YT: @rb_is_the_best</p>
-                    <p>Server: discord.gg/londonlegacy</p>
-                    <p>Other Website: rileyb.shop</p>
+            <div class="home-container">
+                <h1>Welcome to Riley B's Website</h1>
+                <p>Discover my work, connect with me, and join the community!</p>
+                <p><a href="about.html" class="btn">Learn more about me</a></p>
+            </div>
+        </section>
+        
+        <section id="featured-content">
+            <div class="content-container">
+                <h2>Featured Content</h2>
+                <div class="content-grid">
+                    <div class="content-item">
+                        <img src="img/logo.png" alt="Featured Content 1">
+                        <h3>Exciting Project</h3>
+                        <p>Description of an exciting project Riley B is working on.</p>
+                        <a href="docs.html" class="btn">Read more</a>
+                    </div>
+                    <div class="content-item">
+                        <img src="img/logo.png" alt="Featured Content 2">
+                        <h3>Latest Video</h3>
+                        <p>Check out the latest video on Riley B's YouTube channel.</p>
+                        <a href="docs.html" class="btn">Watch now</a>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
 
+        <section id="recent-posts">
+            <div class="posts-container">
+                <h2>Recent Posts</h2>
+                <div class="posts-grid">
+                    <div class="post-item">
+                        <h3>Post Title 1</h3>
+                        <p>A brief summary of the recent post or blog entry.</p>
+                        <a href="docs.html" class="btn">Read more</a>
+                    </div>
+                    <div class="post-item">
+                        <h3>Post Title 2</h3>
+                        <p>A brief summary of the recent post or blog entry.</p>
+                        <a href="docs.html" class="btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="call-to-action">
+            <div class="cta-container">
+                <h2>Join the Community</h2>
+                <p>Connect with like-minded individuals, share your ideas, and collaborate on exciting projects.</p>
+                <a href="https://discord.gg/londonlegacy" class="btn" target="_blank">Join the Discord Server</a>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Riley B. All rights reserved.</p>
     </footer>
-
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'V9L7pdAVdxg',
-                playerVars: {
-                    'autoplay': 0, // Start with autoplay disabled
-                    'controls': 0, // Hide default controls
-                    'loop': 1,
-                    'playlist': 'V9L7pdAVdxg'
-                }
-            });
-
-            document.getElementById('tinted-overlay').addEventListener('click', function() {
-                player.playVideo();
-                document.getElementById('tinted-overlay').style.display = 'none';
-            });
-        }
-    </script>
 </body>
 </html>
