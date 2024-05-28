@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Riley B</title>
+    <title> - Riley B's Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,25 +11,30 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="rileyb.html">About Me</a></li>
                 <li><a href="https://www.rileyb.shop" target="_blank">Shop</a></li>
+                <li><a href="https://discord.gg/SJNnznwvmt" target="_blank">Our Discord!</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="about">
-            <div class="video-container">
-                <div id="tinted-overlay">
-                    <p>Click to Enter</p>
-                </div>
-                <div id="player"></div>
-                <div class="info-box">
-                    <h2>Riley B</h2>
-                    <p>Email: rb@rileyb.co.uk</p>
-                    <p>Discord: rileyshy08</p>
-                    <p>YT: @rb_is_the_best</p>
-                    <p>Server: discord.gg/londonlegacy</p>
-                    <p>Other Website: rileyb.shop</p>
+        <section id="docs">
+            <div class="docs-container">
+                <nav class="docs-nav">
+                    <ul>
+                        <li><a href="websitedata.html">About Riley B Community</a></li>
+                    </ul>
+                </nav>
+                <div class="docs-content">
+                    <article>
+                        <h2>Welcome to Riley B Community</h2>
+                        <p>This page is about us.</p>
+                        <p>Website developer: Riley B</p>
+                        <p>Website version: 2.1</p>
+                        <p>Website Owner: Riley B</p>
+                        <p>Other website: https://www.rileyb.shop</p>
+
+                    </article>
                 </div>
             </div>
         </section>
@@ -37,27 +42,5 @@
     <footer>
         <p>&copy; 2024 Riley B. All rights reserved.</p>
     </footer>
-
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'V9L7pdAVdxg',
-                playerVars: {
-                    'autoplay': 0, // Start with autoplay disabled
-                    'controls': 0, // Hide default controls
-                    'loop': 1,
-                    'playlist': 'V9L7pdAVdxg'
-                }
-            });
-
-            document.getElementById('tinted-overlay').addEventListener('click', function() {
-                player.playVideo();
-                document.getElementById('tinted-overlay').style.display = 'none';
-            });
-        }
-    </script>
 </body>
 </html>
