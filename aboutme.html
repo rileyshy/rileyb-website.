@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley B About me!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        main {
+            position: relative;
+            min-height: 100vh;
+            padding-top: 80px; /* Add padding to avoid content overlap with header */
+        }
+
+        .home-container {
+            text-align: center;
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #featured-content, #recent-posts, #call-to-action {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .content-container, .posts-container, .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-grid, .posts-grid {
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .content-item, .post-item {
+            background-color: #1f1f1f;
+            padding: 1em;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .content-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .about-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Riley B Photography</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rileyb.html">About Riley B</a></li>
+                <li><a href="aboutme.html">More About Riley B </a></li>
+                <li><a href="https://www.rileyb.shop" target="_blank">Shop</a></li>
+                <li><a href="https://discord.gg/SJNnznwvmt" target="_blank">Our Discord!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-container">
+            <h2>Welcome to Riley B ABOUT ME!</h2>
+            <p>View about me!</p>
+        </section>
+
+        <section id="about" class="about-container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Riley B I do Photography in my spare time when I am not coding &#128514</p>
+            <p>To view my Photography go to <a href="portfolio.html" class="btn">My Portfolio</a></p>
+        </section>
+
+    <footer>
+        <p>&copy; 2024 Riley B. All rights reserved.</p>
+    </footer>
+</body>
+</html>
