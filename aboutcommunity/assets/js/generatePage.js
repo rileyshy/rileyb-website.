@@ -39,7 +39,7 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
     const base64Content = btoa(userPageContent);
 
     // Create GitHub API request
-    const token = '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'; // Replace with your GitHub token
+    const token = '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'; // Replace with your GitHub token
     const repo = 'your-github-rileyshy/rileyb-website.'; // Replace with your repository
     const path = `pages/${username}.html`;
 
