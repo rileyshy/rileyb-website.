@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Page</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Create Your Page</h1>
+        <form id="userForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="videoUrl">Background Video URL:</label>
+            <input type="url" id="videoUrl" name="videoUrl" required>
+
+            <label for="socialLinks">Social Links (comma-separated URLs):</label>
+            <input type="text" id="socialLinks" name="socialLinks" required>
+
+            <button type="submit">Generate Page</button>
+        </form>
+    </div>
+
+    <script src="assets/js/generatePage.js"></script>
+</body>
+</html>
