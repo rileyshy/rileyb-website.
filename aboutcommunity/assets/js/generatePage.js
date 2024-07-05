@@ -1,5 +1,3 @@
-// assets/js/generatePage.js
-
 document.getElementById('userForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -36,13 +34,26 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
     `;
 
     // Convert the HTML content to base64
-    const base64Content = btoa(userPageContent);
+    const base64Content = btoa(unescape(encodeURIComponent(userPageContent)));
 
-    // Create GitHub API request
-    const token = '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'; // Replace with your GitHub token
+    // Fetch the token securely from the environment or a server endpoint
+    const token = process.env.GH_TOKEN;
+
+    if (!token) {
+        console.error('Token is missing. Please set the GH_TOKEN environment variable.');
+        return;
+    }
+
+    // Define GitHub repository details
     const repo = 'your-github-rileyshy/rileyb-website.'; // Replace with your repository
-    const path = `pages/${username}.html`;
+    const path = `aboutcommunity/pages/${username}.html`;
 
+    // Debugging: log the URL and path to check if they are correct
+    console.log(`Requesting: https://api.github.com/repos/${repo}/contents/${path}`);
+    console.log(`Token: ${token ? 'Present' : 'Missing'}`);
+    console.log(`Content Length: ${base64Content.length}`);
+
+    // Create GitHub API request to upload the file
     fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
         method: 'PUT',
         headers: {
@@ -53,12 +64,17 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
             message: `Add ${username} page`,
             content: base64Content
         })
-    }).then(response => response.json())
-      .then(data => {
-          if (data.content && data.content.html_url) {
-              alert(`Page created: ${data.content.html_url}`);
-          } else {
-              console.error('Error creating page:', data);
-          }
-      }).catch(error => console.error('Error:', error));
+    }).then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error(`HTTP error! Status: ${response.status}, Message: ${response.statusText}`);
+        }
+    }).then(data => {
+        if (data.content && data.content.html_url) {
+            alert(`Page created: ${data.content.html_url}`);
+        } else {
+            console.error('Error creating page:', data);
+        }
+    }).catch(error => console.error('Error:', error));
 });
