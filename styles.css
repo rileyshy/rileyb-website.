@@ -47,24 +47,39 @@ main {
 }
 
 .home-container {
-    text-align: center;
-    padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
+    padding: 1em;
+    max-width: 400px;
+    margin: 50 auto;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #007BFF;
+    background-color: #ff0000;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
+.btn1 {
+    display: block; /* Change from inline-block to block */
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: top;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #ff0000;
 }
 
 #featured-content, #recent-posts, #call-to-action {
@@ -79,7 +94,7 @@ main {
 
 .content-grid, .posts-grid {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -87,8 +102,8 @@ main {
 .content-item, .post-item {
     background-color: #1f1f1f;
     padding: 1em;
-    border-radius: 10px;
-    max-width: 400px;
+    border-radius: 8px;
+    max-width: 300px;
     text-align: center;
 }
 
