@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 80px; /* Add padding to avoid content overlap with header */
+}
+
+.home-container {
+    text-align: center;
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#featured-content, #recent-posts, #call-to-action {
+    padding: 2em;
+    text-align: center;
+}
+
+.content-container, .posts-container, .cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-grid, .posts-grid {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content-item, .post-item {
+    background-color: #1f1f1f;
+    padding: 1em;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.content-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interactions with the video */
+}
+
+#tinted-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure it appears above the information box */
+}
+
+#tinted-overlay p {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.info-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2em;
+    border-radius: 10px;
+    text-align:  left;
+    z-index: 1; /* Ensure it appears below the tinted overlay */
+    border: 2px solid white; /* White border */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); /* White glow */
+}
+
+.about-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styles for the docs page */
+.docs-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.docs-nav {
+    flex: 0 0 auto; /* Remove the flex-grow property */
+    width: 150px; /* Set a specific width */
+    padding-right: 1em; /* Adjust padding */
+    order: -1; /* Move the navigation to the left side */
+}
+
+.docs-nav select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1em;
+}
+
+.docs-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav ul li {
+    margin-bottom: 1em;
+}
+
+.docs-nav ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+}
+
+.docs-nav ul li a:hover {
+    background-color: #333;
+    color: white;
+}
