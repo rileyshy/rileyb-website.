@@ -66,7 +66,7 @@ body {
 }
 
 .bio-box {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(0, 247, 255, 0.5);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
@@ -76,22 +76,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    outline: 2px solid #ff0000;
+    outline: 2px solid #00fff2;
     outline-offset: 10px;
 }
 
 .bio-box h1, .bio-box p {
     color: #fff;
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000;
+    text-shadow: 0 0 5px #00fff2 0 0 10px #00fff2, 0 0 15px #00fff2 0 0 20px #ff0000;
     animation: glow 2s ease-in-out infinite;
 }
 
 @keyframes glow {
     0%, 100% {
-        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000;
+        text-shadow: 0 0 5px #00fff2 0 0 10px #00fff2 0 0 15px #00fff2 0 0 20px #ff0000;
     }
     50% {
-        text-shadow: 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000;
+        text-shadow: 0 0 10px #00fff2 0 0 15px #00fff2 0 0 20px #00fff2 0 0 25px #ff0000;
     }
 }
 
