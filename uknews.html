@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK NEWS</title>
+    <link rel="stylesheet" href="styles.css">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        .content-grid {
+           display: grid;
+           gap: 3em;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+           justify-items: left; 
+
+}
+
+
+        .content-grid {
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .content-item {
+            background-color: #1f1f1f;
+            padding: 1em;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.2s; 
+        }
+
+        .content-item:hover {
+            transform: translateY(-5px); 
+        }
+
+        .content-item a {
+            color: white;
+            text-decoration: none;
+            display: block; 
+        }
+
+        .content-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        header nav ul {
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 2rem;
+              margin: 0;
+}
+    </style>
+</head>
+<body>
+    <section id="featured-content">
+        <div class="content-container">
+            <h1>Welcome to 'Whats happening in the UK Recently'</h1>
+            <p>Check out the UK news source's</p>
+
+
+            <div class="content-grid">
+                <div class="content-item">
+                    <a href="https://www.bbc.co.uk/news">
+                        <img src="img/bbcnews.png" alt="BBC News">
+                        <h2>BBC News</h2>
+                        <p>Check out BBC News </p>
+                    </a>
+                </div>
+            <div class="content-grid">
+                <div class="content-item">
+                    <a href="https://www.itv.com/news">
+                        <img src="img/itv.png" alt="ITV NEWS">
+                        <h2>ITV News</h2>
+                        <p>Check out ITV News </p>
+                    </a>
+                </div>
+            <div class="content-grid">
+                <div class="content-item">
+                    <a href="https://www.thesun.co.uk/">
+                        <img src="img/thesun.png" alt="The Sun News">
+                        <h2>The Sun News</h2>
+                        <p>Check out The Sun News</p>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

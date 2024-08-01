@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley B News</title>
+    <link rel="stylesheet" href="styles.css">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        .content-grid {
+           display: grid;
+           gap: 1em;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+           justify-items: left; 
+
+}
+
+
+        .content-grid {
+            display: flex;
+            gap: 1m;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .content-item {
+            background-color: #1f1f1f;
+            padding: 1em;
+            border-radius: 6px;
+            max-width: 285px;
+            text-align: center;
+            transition: transform 0.2s; 
+        }
+
+        .content-item:hover {
+            transform: translateY(-5px); 
+        }
+
+        .content-item a {
+            color: white;
+            text-decoration: none;
+            display: block; 
+        }
+
+        .content-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        header nav ul {
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 2rem;
+              margin: 0;
+}
+    </style>
+</head>
+<body>
+    <section id="featured-content">
+        <div class="content-container">
+            <h1>RileyB's News</h1>
+            <div class="content-grid">
+                <div class="content-item">
+                    <a href="https://discord.gg/zgFurzgd8m">
+                        <img src="img/vortex-hosting.gif" alt="">
+                        <h2>Vortex Services</h2>
+                        <p>Check out my new company Vortex Services</p>
+                    </a>
+                </div>
+                <div class="content-item">
+                    <a href="luxuryrp">
+                        <img src="img/luxuryrp.png" alt="X9 Roleplay 2.0">
+                        <h2></h2>
+                        <p>Luxury Gaming Roleplay is a fivem server</p>
+                        <a href="" class="btn">Discord</a
+                    </a>
+                </div>
+                <div class="content-item">
+                    <a href="https://rileyb.shop">
+                        <img src="img/rileyshop.png" alt="News 2">
+                        <h2>rileyb.shop </h2>
+                        <p>Check out RileyB's Shop</p>
+                    </a>
+                </div>
+                <div class="content-item">
+                    <a href="uknews">
+                        <img src="img/uknews.png" alt="UK news Sources">
+                        <h2>Recent News in the United Kingdom </h2>
+                        <p>Check out the UK NEWS</p>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
