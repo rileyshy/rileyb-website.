@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Purchase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vortex Services - Purchase</h1>
+        <nav>
+            <a href="home">Home</a>
+            <a href="contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="purchase-confirmation">
+            <h2>Thank you for your purchase!</h2>
+            <p>Your purchase was successful. You can now access the product by clicking the link below:</p>
+            <a id="googleDriveLink" href="#" target="_blank">Access Google Drive Link</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Vortex Services</p>
+    </footer>
+    <script>
+        // Check if a valid token is provided in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        const googleDriveLink = 'https://drive.google.com/drive/folders/EXAMPLE'; // Replace with actual link
+
+        if (token) {
+            fetch(`/validate-token?token=${token}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.valid) {
+                        document.getElementById('googleDriveLink').href = googleDriveLink;
+                    } else {
+                        alert('Invalid or expired token.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error validating your token.');
+                });
+        } else {
+            alert('No token provided.');
+        }
+    </script>
+</body>
+</html>
