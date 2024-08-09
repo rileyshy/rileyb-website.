@@ -3,69 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Access</title>
+    <title>Order Confirmation - Vortex Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Vortex Services - Product Access</h1>
+        <h1>Vortex Services - Order Confirmation</h1>
         <nav>
             <a href="home">Home</a>
             <a href="contact">Contact</a>
         </nav>
     </header>
     <main>
-        <section class="purchase-confirmation">
+        <section class="confirmation-section">
             <h2>Thank you for your purchase!</h2>
-            <p>Your purchase was successful. You can now access the product by clicking the link below:</p>
-            <a id="googleDriveLink" href="#" target="_blank">Access Google Drive Link</a>
+            <p>Your payment has been received. Below are the links to your purchased products:</p>
+
+            <div class="product-links">
+                <!-- Example for Loading Screens -->
+                <div class="product-item">
+                    <h3>REB-LOADING-V1</h3>
+                    <p>Price: £2</p>
+                    <a href="https://drive.google.com/drive/folders/1Cb8P0GGWnFnJ3T0cgVrXe0CIOPYvgnqC?usp=sharing" target="_blank">Download Loading Screen 1</a>
+                </div>
+                <div class="product-item">
+                    <h3>Loading Screen 2</h3>
+                    <p>Price: £25.00</p>
+                    <a href="https://drive.google.com/your-link2" target="_blank">Download Loading Screen 2</a>
+                </div>
+
+                <!-- Example for Scripts -->
+                <div class="product-item">
+                    <h3>oELS</h3>
+                    <p>Price: £15.00</p>
+                    <a href="https://drive.google.com/drive/folders/1DeTFoYYLr85lXQ544d4N_KeVT1c5KHh8?usp=sharing" target="_blank">Download Script 1</a>
+                </div>
+                <div class="product-item">
+                    <h3>Script 2</h3>
+                    <p>Price: £30.00</p>
+                    <a href="https://drive.google.com/your-link-script2" target="_blank">Download Script 2</a>
+                </div>
+
+                <!-- Example for MLOs -->
+                <div class="product-item">
+                    <h3>STO MOTORS</h3>
+                    <p>Price: £5.00</p>
+                    <a href="https://drive.google.com/drive/folders/16NgbVcAfTSCbaybqrMp7llTcNbhvHTn5?usp=sharing" target="_blank">Download MLO 1</a>
+                </div>
+                <div class="product-item">
+                    <h3>MLO 2</h3>
+                    <p>Price: £50.00</p>
+                    <a href="https://drive.google.com/your-link-mlo2" target="_blank">Download MLO 2</a>
+                </div>
+
+                <!-- Example for Logos -->
+                <div class="product-item">
+                    <h3>Logo 1</h3>
+                    <p>Price: £5.00</p>
+                    <a href="https://docs.google.com/document/d/1TjYwY01XCrfXb82mz_CmDezOThR12Df1do40hbUgB04/edit?usp=sharing" target="_blank">Download Logo 1</a>
+                </div>
+                <div class="product-item">
+                    <h3>Logo 2</h3>
+                    <p>Price: £15.00</p>
+                    <a href="https://drive.google.com/your-link-logo2" target="_blank">Download Logo 2</a>
+                </div>
+
+                <!-- Example for Banners -->
+                <div class="product-item">
+                    <h3>Banner 1</h3>
+                    <p>Price: £12.00</p>
+                    <a href="https://drive.google.com/your-link-banner1" target="_blank">Download Banner 1</a>
+                </div>
+                <div class="product-item">
+                    <h3>Banner 2</h3>
+                    <p>Price: £18.00</p>
+                    <a href="https://drive.google.com/your-link-banner2" target="_blank">Download Banner 2</a>
+                </div>
+
+                <!-- Example for Other Products -->
+                <div class="product-item">
+                    <h3>More Product 1</h3>
+                    <p>Price: £25.00</p>
+                    <a href="https://drive.google.com/your-link-more1" target="_blank">Download More Product 1</a>
+                </div>
+                <div class="product-item">
+                    <h3>More Product 2</h3>
+                    <p>Price: £35.00</p>
+                    <a href="https://drive.google.com/your-link-more2" target="_blank">Download More Product 2</a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Vortex Services</p>
     </footer>
-    <script>
-        // Check if a valid token is provided in the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const token = urlParams.get('token');
-        const product = urlParams.get('product');
-        let googleDriveLink = '';
-
-        switch (product) {
-            case 'product1':
-                googleDriveLink = 'https://drive.google.com/drive/folders/1Cb8P0GGWnFnJ3T0cgVrXe0CIOPYvgnqC?usp=sharing'; // Replace with actual link
-                break;
-            case 'product2':
-                googleDriveLink = 'https://drive.google.com/drive/folders/EXAMPLE2'; // Replace with actual link
-                break;
-            case 'product3':
-                googleDriveLink = 'https://drive.google.com/drive/folders/EXAMPLE3'; // Replace with actual link
-                break;
-            case 'product4':
-                googleDriveLink = 'https://drive.google.com/drive/folders/EXAMPLE4'; // Replace with actual link
-                break;
-            default:
-                alert('Invalid product.');
-                break;
-        }
-
-        if (token) {
-            fetch(`/validate-token?token=${token}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.valid) {
-                        document.getElementById('googleDriveLink').href = googleDriveLink;
-                    } else {
-                        alert('Invalid or expired token.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was an error validating your token.');
-                });
-        } else {
-            alert('No token provided.');
-        }
-    </script>
 </body>
 </html>
