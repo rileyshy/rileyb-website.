@@ -34,7 +34,7 @@ renderPayPalButtons('paypal-button-container-loading-screen2', '5.00', 'Loading 
 renderPayPalButtons('paypal-button-container-script1', '15.00', 'Script 1', 'script1');
 renderPayPalButtons('paypal-button-container-script2', '30.00', 'Script 2', 'script2');
 renderPayPalButtons('paypal-button-container-mlo1', '5.00', 'MLO 1', 'mlo1');
-renderPayPalButtons('paypal-button-container-mlo2', '50.00', 'MLO 2', 'mlo2');
+renderPayPalButtons('paypal-button-container-mlo2', '2.00', 'MLO 2', 'mlo2');
 renderPayPalButtons('paypal-button-container-logo1', '5.00', 'Logo 1', 'logo1');
 renderPayPalButtons('paypal-button-container-logo2', '15.00', 'Logo 2', 'logo2');
 renderPayPalButtons('paypal-button-container-banner1', '12.00', 'Banner 1', 'banner1');
