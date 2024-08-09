@@ -1,4 +1,4 @@
-const CLIENT_ID = 'YOUR_PAYPAL_CLIENT_ID';
+const CLIENT_ID = 'AQ3XkanIb_lOO59v6Q68RE0AedWK5xOuYfrczvPaM3AAtzy979hB9NcshQvXFa_Fs6Ha3tAbX2EKwGvt';
 const RETURN_URL = 'https://yourdomain.com/confirmation.html'; // URL where users are redirected after payment
 
 // Helper function to render PayPal buttons for a product
