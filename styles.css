@@ -223,51 +223,70 @@ footer {
     background-color: #333;
     color: white;
 }
-/* Mobile Styles */
+
+/* Media Queries for Mobile Devices */
+
 @media (max-width: 768px) {
     header {
-        padding: 15px;
+        padding: 0.5em 0;
+        font-size: 0.9em;
     }
 
-    nav a {
+    nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 0.5em 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    .home-container, .content-container, .posts-container, .cta-container, .about-container, .docs-container {
+        max-width: 100%;
+        padding: 1em;
+    }
+
+    .content-grid, .posts-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .content-item, .post-item {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .btn, .btn1 {
+        width: 100%;
+        padding: 15px;
         text-align: center;
     }
 
-    main {
-        padding: 10px;
+    .btn1 {
+        position: static;
+        transform: none;
+        margin-top: 1em;
     }
 
-    .products-section h2 {
-        font-size: 1.5em;
+    .info-box {
+        width: 90%;
+        padding: 1em;
     }
 
-    .product-container {
+    .docs-container {
         flex-direction: column;
-        align-items: center;
+        padding: 1em;
     }
 
-    .product {
-        max-width: 90%;
-        margin-bottom: 20px;
+    .docs-nav {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 1em;
     }
 
-    footer {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .product h3 {
-        font-size: 1.1em;
-    }
-
-    .product p {
+    .docs-nav select, .docs-nav ul li a {
         font-size: 0.9em;
+        padding: 8px;
     }
 }
