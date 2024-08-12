@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f06, #ff9a9e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        #container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        input[type="password"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ff5e62;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff9999;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Enter the Password</h1>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Submit</button>
+</div>
+
+<script>
+    function checkPassword() {
+        const password = document.getElementById('password').value;
+        if (password === '43') {
+            window.location.href = 'birthday.html';
+        } else {
+            alert('Incorrect Password. Try again.');
+        }
+    }
+</script>
+
+</body>
+</html>
