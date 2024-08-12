@@ -223,3 +223,51 @@ footer {
     background-color: #333;
     color: white;
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .products-section h2 {
+        font-size: 1.5em;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .product h3 {
+        font-size: 1.1em;
+    }
+
+    .product p {
+        font-size: 0.9em;
+    }
+}
