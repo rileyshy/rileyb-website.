@@ -101,7 +101,7 @@
         <li>🎉 A day filled with love and joy!</li>
         <li>❤️ Love you more than words can say!</li>
     </ul>
-    <li>The Timer ends when your Birthday does.</li>
+    <li>Your Birthday has ended. ☹️</li>
 
     <!-- Countdown Timer -->
     <div id="countdown"></div>
@@ -120,45 +120,7 @@
     Your browser does not support the audio element.
 </audio>
 
-<script>
-    // Countdown Timer Script
-    const endCountdownDate = new Date("Aug 15, 2024 00:00:00").getTime();
 
-    const countdownFunction = setInterval(function() {
-        const now = new Date().getTime();
-
-        const distance = endCountdownDate - now;
-
-        if (distance > 0) {
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = 
-                "Time until the end of your special day: " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-        } else {
-            clearInterval(countdownFunction);
-            document.getElementById("countdown").innerHTML = "Time's up! Hope you had a wonderful day!";
-        }
-    }, 1000);
-
-    // Music Controls Script
-    const music = document.getElementById("background-music");
-    let isPlaying = true;
-
-    function toggleMusic() {
-        if (isPlaying) {
-            music.pause();
-            document.querySelector("#music-controls button").textContent = "Play Music";
-        } else {
-            music.play();
-            document.querySelector("#music-controls button").textContent = "Pause Music";
-        }
-        isPlaying = !isPlaying;
-    }
-</script>
 
 </body>
 </html>
