@@ -1,20 +1,23 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #181818;
     color: white;
+    line-height: 1.6;
 }
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(20, 20, 20, 0.95);
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
     z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -26,7 +29,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -34,57 +38,52 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    background-color: #111;
+    background-color: #00e5ff;
+    border-radius: 5px;
 }
 
 main {
-    position: relative;
+    padding-top: 100px; 
     min-height: 100vh;
-    padding-top: 80px; 
 }
 
 .home-container {
-    text-align: left;
-    padding: 1em;
-    max-width: 400px;
-    margin: 50 auto;
+    text-align: center;
+    padding: 2em 1em;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #202020;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 12px 30px;
+    margin-top: 20px;
     background-color: #00e5ff;
     color: black;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
-
-.btn1 {
-    display: block; /* Change from inline-block to block */
-    padding: 10px 20px;
-    background-color: #00e5ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 100px;
-    text-align: top;
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 .btn:hover {
-    background-color: #00e5ff;
+    background-color: #00c2d6;
 }
 
+/* Featured Content and Posts Sections */
 #featured-content, #recent-posts, #call-to-action {
-    padding: 2em;
-    text-align: left;
+    padding: 3em 0;
+    background-color: #1e1e1e;
+    text-align: center;
 }
 
 .content-container, .posts-container, .cta-container {
@@ -94,31 +93,39 @@ main {
 
 .content-grid, .posts-grid {
     display: flex;
-    gap: 1em;
-    justify-content: left;
+    gap: 2em;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .content-item, .post-item {
-    background-color: #1f1f1f;
-    padding: 1em;
-    border-radius: 8px;
-    max-width: 300px;
+    background-color: #252525;
+    padding: 1.5em;
+    border-radius: 10px;
+    max-width: 350px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-item:hover, .post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .content-item img {
     max-width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
 }
 
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: relative;
-    width: 100%;
+    padding: 2em 0;
+    border-top: 4px solid #00e5ff;
+    margin-top: 4em;
 }
 
 .video-container {
@@ -134,7 +141,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Prevent interactions with the video */
+    pointer-events: none; 
 }
 
 #tinted-overlay {
@@ -143,16 +150,16 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Ensure it appears above the information box */
+    z-index: 2; 
 }
 
 #tinted-overlay p {
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
 }
 
@@ -161,49 +168,52 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    padding: 2em;
-    border-radius: 10px;
-    text-align:  left;
-    z-index: 1; /* Ensure it appears below the tinted overlay */
-    border: 2px solid white; /* White border */
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); /* White glow */
-}
-
-.about-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 3em;
+    border-radius: 12px;
     text-align: center;
+    z-index: 1;
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.2);
 }
 
-/* Styles for the docs page */
+/* About Section */
+.about-container {
+    padding: 3em 1em;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Documentation Page Styles */
 .docs-container {
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 2em;
 }
 
 .docs-nav {
-    flex: 0 0 auto; /* Remove the flex-grow property */s
-    width: 150px; /* Set a specific width */
-    padding-right: 1em; /* Adjust padding */
-    order: -1; /* Move the navigation to the left side */
+    flex: 0 0 200px;
+    padding-right: 2em;
 }
 
 .docs-nav select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 1em;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
 }
 
 .docs-nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
 .docs-nav ul li {
@@ -211,24 +221,23 @@ footer {
 }
 
 .docs-nav ul li a {
-    color: #007BFF;
+    color: #00e5ff;
     text-decoration: none;
     display: block;
-    padding: 10px;
-    background-color: #1f1f1f;
+    padding: 12px;
+    background-color: #333;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .docs-nav ul li a:hover {
-    background-color: #333;
-    color: white;
+    background-color: #444;
 }
 
-/* Media Queries for Mobile Devices */
-
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     header {
-        padding: 0.5em 0;
+        padding: 1em;
         font-size: 0.9em;
     }
 
@@ -238,40 +247,21 @@ footer {
     }
 
     nav ul li a {
-        padding: 10px;
-        display: block;
+        padding: 12px;
     }
 
-    .home-container, .content-container, .posts-container, .cta-container, .about-container, .docs-container {
+    .home-container, .about-container, .content-container, .posts-container, .cta-container, .docs-container {
         max-width: 100%;
-        padding: 1em;
+        padding: 1.5em;
     }
 
     .content-grid, .posts-grid {
         flex-direction: column;
-        gap: 0;
     }
 
     .content-item, .post-item {
         max-width: 100%;
-        margin-bottom: 1em;
-    }
-
-    .btn, .btn1 {
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .btn1 {
-        position: static;
-        transform: none;
-        margin-top: 1em;
-    }
-
-    .info-box {
-        width: 90%;
-        padding: 1em;
+        margin-bottom: 2em;
     }
 
     .docs-container {
@@ -282,11 +272,6 @@ footer {
     .docs-nav {
         width: 100%;
         padding-right: 0;
-        margin-bottom: 1em;
-    }
-
-    .docs-nav select, .docs-nav ul li a {
-        font-size: 0.9em;
-        padding: 8px;
+        margin-bottom: 1.5em;
     }
 }
