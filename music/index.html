@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RileyB's Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RILEYB.CO.UK</h1>
+        </header>
+
+        <nav>
+            <button onclick="showSection('tunes')">Tunes</button>
+            <button onclick="showSection('rap')">Rap</button>
+            <button onclick="showSection('videosmadebyriley')">Videos Published by Riley B</button>
+        </nav>
+
+        <div id="tunes" class="video-section">
+            <div class="video-item" onclick="playVideo('videos/tunes/meetmehalfway/meetmehalfway.mp4')">
+                <img src="videos/tunes/meetmehalfway/meetmehalfway.png" alt="The Black Eyed Peas - Meet Me Halfway (Lyrics)">
+                <p>The Black Eyed Peas - Meet Me Halfway (Lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('videos/tunes/blame/blame.mp4')">
+                <img src="videos/tunes/blame/blame.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
+                <p>Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵</p>
+            </div>
+            <div class="video-item" onclick="playVideo('videos/tunes/lalala/lalala.mp4')">
+                <img src="videos/tunes/lalala/lalala.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
+                <p>Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵</p>
+            </div>
+            <div class="video-item" onclick="playVideo('videos/tunes/foreveryoung/foreveryoung.mp4')">
+                <img src="videos/tunes/foreveryoung/foreveryoung.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
+                <p>Alphaville - Forever Young (Lyrics)</p>
+            </div>
+        </div>
+
+        <div id="rap" class="video-section hidden">
+            <h2>Rap</h2>
+            <div class="video-item" onclick="playVideo('videos/rap/cheersfortherosesthere/cheersfortherosesthere.mp4')">
+                <img src="videos/rap/cheersfortherosesthere/cheersfortherosesthere.png" alt="Rap Video 1">
+                <p>Luke Bennett - Cheers For The Roses There</p>
+            </div>
+        </div>
+
+        <div id="videosmadebyriley" class="video-section hidden">
+            <h2>Videos Published by Riley B</h2>
+            <div class="video-item" onclick="playVideo('videos/rileyb/luxuryg/luxuryg.mp4')">
+                <img src="videos/rileyb/luxuryg/luxuryg.png" alt="Luxury Gaming Roleplay Intro video">
+                <p>Luxury Gaming Roleplay Intro video</p>
+            </div>
+        </div>
+
+        <div id="video-player" class="hidden">
+            <video controls id="video" width="100%"></video>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About rileyb.co.uk/music</h2>
+            <p>
+                rileyb.co.uk/music is your go-to platform for watching and sharing your favorite videos across various genres. Tune in and enjoy the best content with a seamless experience!
+            </p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tunes</a></li>
+                <li><a href="#">Rap</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@rileyb.co.uk</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 rileyb.co.uk | All rights reserved</p>
+    </div>
+</footer>
+</html>
