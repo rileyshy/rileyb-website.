@@ -101,7 +101,7 @@ main {
 .content-item, .post-item {
     background-color: #252525;
     padding: 1.2em;
-    border-radius: 10px;
+    border-radius: 5px;
     max-width: 350px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
