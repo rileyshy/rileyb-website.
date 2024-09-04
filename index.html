@@ -3,93 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riley B Website - Home </title>
+    <title>Riley B - Creative Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about/rileyb">About Riley B</a></li>
-                <li><a href="aboutme">More About Riley B </a></li>
-                <li><a href="shop">Shop</a></li>
-                <li><a href="https://discord.gg/SJNnznwvmt" target="_blank">Our Discord!</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="home">Riley B</a></div>
+                <ul class="nav-menu">
+                    <li><a href="about/rileyb">About</a></li>
+                    <li><a href="portfolio">Portfolio</a></li>
+                    <li><a href="shop">Shop</a></li>
+                    <li><a href="https://discord.gg/SJNnznwvmt" target="_blank">Discord</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main>
-        <section id="home">
-            <div class="home-container">
-                <h1>Welcome to rileyb.co.uk</h1>
+        <!-- Hero Section with Video Background -->
+        <section class="hero">
+            <video class="hero-video" autoplay muted loop>
+                <source src="vids/bgvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <div class="hero-content">
+                    <h1>Discover Riley B's Creative Universe</h1>
+                    <p>Explore projects, music, community, and much more.</p>
+                    <a href="https://discord.gg/M37ruKh49b" class="hero-btn" target="_blank">Join Our Community</a>
+                </div>
             </div>
         </section>
         
-        <section id="featured-content">
-            <div class="content-container">
-                <h2>Featured Content</h2>
-                <div class="content-grid">
-                    <div class="content-item">
+        <!-- Featured Section -->
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">Featured Content</h2>
+                <div class="grid">
+                    <div class="grid-item">
                         <img src="img/work.png" alt="Riley B projects">
-                        <h3>Exciting Project</h3>
-                        <p>Check out our other projects</p>
-                        <a href="section2" class="btn">Read more</a>
+                        <h3>Exciting Projects</h3>
+                        <p>Discover unique projects and collaborations.</p>
+                        <a href="section2" class="btn">Learn More</a>
                     </div>
-                    <div class="content-item">
+                    <div class="grid-item">
                         <img src="img/music.png" alt="Riley B Music Classics">
-                        <h3>MUSIC</h3>
-                        <p>If you are bored listen to some clasics.</p>
-                        <a href="music" class="btn">Read more</a>
+                        <h3>Music</h3>
+                        <p>Experience classic hits and new tracks.</p>
+                        <a href="music" class="btn">Listen Now</a>
                     </div>
-                    <div class="content-item">
+                    <div class="grid-item">
                         <img src="img/news.png" alt="Riley B News">
                         <h3>News</h3>
-                        <p>Check out the recent UK News  </p>
-                        <a href="news" class="btn">Read more</a>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <section id="recent-posts">
-            <div class="posts-container">
-                <h2>Staff Team</h2>
-                <div class="posts-grid">
-                    <div class="post-item">
-                        <h3>Staff</h3>
-                        <p>A brief entry to our staff team!</p>
-                        <a href="staff" class="btn">Read more</a>
-                    </div>
-                    <div class="post-item">
-                        <h3>Fan Art!</h3>
-                        <p>Check out my fan art</p>
-                        <a href="fanart" class="btn">Read more</a>
-                    </div>
-                    <div class="post-item">
-                        <h3>X9 Fan art</h3>
-                        <p>Check out my X9 rp fanart</p>
-                        <a href="hayesmates" class="btn">Read more</a>
+                        <p>Stay updated with the latest news.</p>
+                        <a href="news" class="btn">Read More</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="call-to-action">
-            <div class="cta-container">
-                <h2>Join the Community</h2>
-                <p>Connect with like-minded individuals, share your ideas, and collaborate on exciting projects.</p>
-                <a href="https://discord.gg/M37ruKh49b" class="btn" target="_blank">Join the Discord Server</a>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Our Staff</h3>
+                        <p>Learn about the people behind Riley B.</p>
+                        <a href="staff" class="btn">Meet the Team</a>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Fan Art</h3>
+                        <p>Explore incredible fan creations.</p>
+                        <a href="fanart" class="btn">View Gallery</a>
+                    </div>
+                    <div class="grid-item">
+                        <h3>X9 Fan Art</h3>
+                        <p>Dive into the world of X9 RP fan art.</p>
+                        <a href="hayesmates" class="btn">Explore Art</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Join Our Community</h2>
+                <p>Connect with creative minds and collaborate on exciting projects.</p>
+                <a href="https://discord.gg/M37ruKh49b" class="btn" target="_blank">Join Discord</a>
             </div>
         </section>
     </main>
-    <script>
-        // Get the button element
-        var latestVideoBtn = document.getElementById("latest-video-btn");
 
-        latestVideoBtn.addEventListener("click", function() {
-            window.location.href = "https://www.youtube.com/@RileyB-Community";
-        });
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Riley B. All rights reserved. | <a href="privacy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        setTimeout(function() {
+            window.scrollTo({
+                top: window.innerHeight, 
+                behavior: 'smooth' 
+            });
+        }, 3000);
     </script>
 </body>
 </html>
