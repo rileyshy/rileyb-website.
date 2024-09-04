@@ -3,48 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riley B Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Riley B's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #007BFF;
+        }
+
+        main {
+            position: relative;
+            min-height: 100vh;
+            padding-top: 100px; /* Offset for the fixed header */
+        }
+
+        .home-container {
+            text-align: center;
+            padding: 3em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .section-container {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .content-container, .posts-container, .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-grid, .posts-grid {
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .content-item, .post-item {
+            background-color: #1f1f1f;
+            padding: 1em;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .content-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .about-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .portfolio-container {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-item {
+            background-color: #1f1f1f;
+            padding: 1em;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Riley B Portfolio</h1>
+        <h1>Riley B's Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about/rileyb">About Riley B</a></li>
-                <li><a href="aboutme.html">More About Riley B </a></li>
-                <li><a href="shop">Shop</a></li>
-                <li><a href="https://discord.gg/SJNnznwvmt" target="_blank">Our Discord!</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <h1>‎ </h1>
-    <h1>‎ </h1>
-    <h1>‎ </h1>
-    <h1>‎ </h1>
-    <h1>‎ </h1>
-    <h1>‎ </h1>
-    <h2>Welcome to my: </h2>
 
-    <section id="portfolio" class="content-container">
-        <h2>Portfolio</h2>
-        <div class="content-grid">
+    <main>
+        <section id="home" class="home-container">
+            <h2>Welcome to Riley's Portfolio</h2>
+            <p>Explore my work and know more about me!</p>
+        </section>
 
-            <div class="content-item">
-                <img src="img/portfolio/bonfire.png"Beautiful Landscape">
-                <h3>Fire Picture [Bonfire night]</h3>
-                <p>This picture was captured by Riley Burton on Bonfire night of 2021</p>
-                <p>The image looks like a person burning the fire </p>
-                <p>Email me for purchase <a href="mailto:rb@rileyb.co.uk" class="btn">here</a></p>
+        <section id="about" class="about-container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Riley B and here is my portfolio.</p>
+            <p>I play the game fivem and create assets for this game here is some things that I have made and other things I do.</p>
+        </section>
+
+        <section id="portfolio" class="portfolio-container">
+            <h2>My Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="img/portfolio/blenderchain.png" alt="Chains">
+                    <h3>Fivem Chains</h3>
+                    <p>I make fivem chains and sell them in my discord Vortex Services.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/portfolio/rileybcouk.png" alt="Website Design">
+                    <h3>Web Design</h3>
+                    <p>I can create websites! here is some of my other ones aswell as rileyb.co.uk, novaflex.shop - This one is down for developing. rileyb.shop - Moved it to this domain https://rileyb.co.uk/shop.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/portfolio/LSRP.png" alt="London Streets RP">
+                    <h3>Logo Design</h3>
+                    <p>I can create Fivem server Logo's.</p>
+                </div>
             </div>
-            <div class="content-item">
-                <img src="img/portfolio/motorcycleoverfire.png" alt="motorcycleoverfire">
-                <h3>motorcycle Over fire</h3>
-                <p>This picture was taken on Saturday 22 June 2024.</p>
-                <p>Taken by Riley Burton</p>
-                <p>The image is a person on a motorcycle going over a explosion</p>
-                <p>Email me for purchase <a href="mailto:rb@rileyb.co.uk" class="btn">here</a></p>
-            </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contact" class="section-container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to work with me, feel free to reach out!</p>
+            <a href="mailto:rb@rileyb.co.uk" class="btn">Email Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 rileyb.co.uk.</p>
+    </footer>
+</body>
+</html>
