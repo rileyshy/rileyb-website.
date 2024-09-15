@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/formulaire.css">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <script src="../main.js"></script>
+    <title>London Gaming RP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background-img">
+            <div class="backgrnd-color">
+                <div class="navbar-main">
+                    <div class="flex-container">
+                        <div class="flex-items"></div>
+                        <i class="fas fa-home"></i><a href="../index"><p id="navbar1">Home</p></a>
+                        <i class="fas fa-align-center"></i><a href="rules"><p id="navbar2">Rules</p></a>
+                        <i class="fas fa-users"></i><a><p id="navbar3">Contact</p></a>
+                        <i class="fab fa-discord"></i><a href="https://discord.gg/cKYpRan3aM" target="_blank"><p id="navbar4">Discord</p></a>
+                    </div>
+                </div>
+                <div class="main-title1">London Gaming <strong>Contact</strong></div>
+
+                <!-- Form Structure -->
+                <form id="infoForm">
+                    <div class="discord-result-main">
+                        <h3>Discord</h3>
+                        <input id="discord-result" class="form-discord" type="text" placeholder="Ex: rileyshy08#1523">
+                    </div>
+                    <div class="email-result-main">
+                        <h3>Email Address</h3>
+                        <input id="email-result" class="form-email" type="email" placeholder="Ex: rb@rileyb.co.uk" required>
+                    </div>
+                    <div class="dob-result-main">
+                        <h3>When was you born?</h3>
+                        <input id="dob-result" class="form-dob" type="date" value="2002-09-02">
+                    </div>
+                    <div class="year-result-main">
+                        <h3>Age</h3>
+                        <input id="year-result" class="form-year" type="number" min="10" max="60" placeholder="Age 16">
+                    </div>
+                    <textarea class="disponibility-result-main" id="disponibility-result" rows="3" placeholder="Tell us about you and why you are contacting."></textarea>
+
+                    <div class="confirm-button-first-step">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("infoForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const discordName = document.getElementById("discord-result").value;
+            const email = document.getElementById("email-result").value;
+            const dob = document.getElementById("dob-result").value;
+            const age = document.getElementById("year-result").value;
+            const disponibility = document.getElementById("disponibility-result").value;
+
+            const webhookURL = "https://discord.com/api/webhooks/1284663781460279338/5BB3XGiJw2_PgP68D_LvwuoCe5HhUWGReU2VtDgADg8gxiUaNO66b3zPXVGTbtznOJcc"; 
+
+            // Construct the message payload
+            const messageContent = {
+                content: null,
+                embeds: [{
+                    title: "New Form Submission",
+                    description: "Here is the data submitted from the form:",
+                    fields: [
+                        { name: "Discord Name", value: discordName || "N/A" },
+                        { name: "Email", value: email || "N/A" },
+                        { name: "Date of Birth", value: dob || "N/A" },
+                        { name: "Age", value: age || "N/A" },
+                        { name: "Disponibility", value: disponibility || "N/A" }
+                    ],
+                    color: 3447003 
+                }]
+            };
+
+            fetch(webhookURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(messageContent)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Data successfully sent to Discord!");
+                } else {
+                    alert("Error sending data to Discord.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>
