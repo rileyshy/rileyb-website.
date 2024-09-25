@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Riley B Tunes!</title>
+    <title>Riley B Tunes!"</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="Riley B Tunes!"/>
     <meta name="author" content="Riley B" />
@@ -25,7 +25,7 @@
             <button onclick="showSection('tunes')">Tunes</button>
             <button onclick="showSection('rap')">Rap</button>
             <button onclick="showSection('videosmadebyriley')">Videos Published by Riley B</button>
-            <button onclick="showSection('favsongs1')">JUST VIBES</button>
+            <button onclick="showSection('favsongs')">JUST VIBES</button>
         </nav>
 
         <div id="tunes" class="video-section">
@@ -37,7 +37,38 @@
                 <img src="tunes/blame/blame.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
                 <p>Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵</p>
             </div>
-            <!-- Additional video items -->
+            <div class="video-item" onclick="playVideo('tunes/lalala/lalala.mp4')">
+                <img src="tunes/lalala/lalala.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
+                <p>Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/foreveryoung/foreveryoung.mp4')">
+                <img src="tunes/foreveryoung/foreveryoung.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
+                <p>Alphaville - Forever Young (Lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/bulletproof/bulletproof.mp4')">
+                <img src="tunes/bulletproof/bulletproof.png" alt="La Roux - Bulletproof (lyrics)">
+                <p>La Roux - Bulletproof (lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/hometown/hometown.mp4')">
+                <img src="tunes/hometown/hometown.png" alt="Hometown Glory - Adele (Lyrics) 🎵">
+                <p>Hometown Glory - Adele (Lyrics) 🎵</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/igotafeeling/igotafeeling.mp4')">
+                <img src="tunes/igotafeeling/igotafeeling.png" alt="The Black Eyed Peas - I Gotta Feeling (Lyrics)">
+                <p>The Black Eyed Peas - I Gotta Feeling (Lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/payphone/payphone.mp4')">
+                <img src="tunes/payphone/payphone.png" alt="Maroon 5 Ft. Wiz Khalifa - Payphone (Lyrics)">
+                <p>Maroon 5 Ft. Wiz Khalifa - Payphone (Lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/htsal/howtosavealife.mp4')">
+                <img src="tunes/htsal/howtosavealife.png" alt="The Fray - How to Save a Life (Lyrics)">
+                <p>The Fray - How to Save a Life (Lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/givemeeverything/givemeeverything.mp4')">
+                <img src="tunes/givemeeverything/givemeeverything.png" alt="Pitbull - Give Me Everything ft. Ne-Yo, Afrojack, Nayer">
+                <p>Pitbull - Give Me Everything ft. Ne-Yo, Afrojack, Nayer</p>
+            </div>
         </div>
 
         <div id="rap" class="video-section hidden">
@@ -48,22 +79,42 @@
             </div>
         </div>
 
-        <div id="favsongs1" class="video-section hidden">
+        <div id="favsongs" class="video-section hidden">
             <h2>Just Vibes</h2>
             <div class="video-item" onclick="playVideo('rileyb/favsongs/LFN.mp4')">
                 <img src="rileyb/favsongs/LFN.png" alt="Last Friday Night">
                 <p>Last Friday Night</p>
             </div>
         </div>
-        <div id="favsongs2" class="video-section hidden">
+        <div id="favsongs" class="video-section hidden">
             <h2>Just Vibes</h2>
             <div class="video-item" onclick="playVideo('rileyb/favsongs/IN.mp4')">
                 <img src="rileyb/favsongs/IN.png" alt="International Love">
                 <p>International Love</p>
             </div>
         </div>
-        <!-- Add more sections here -->
-
+        <div id="favsongs" class="video-section hidden">
+            <h2>Just Vibes</h2>
+            <div class="video-item" onclick="playVideo('rileyb/favsongs/NHMB.mp4')">
+                <img src="rileyb/favsongs/NHMB.png" alt="There's nothing holding me back">
+                <p>There's nothing holding me back</p>
+            </div>
+        </div>
+        <div id="favsongs" class="video-section hidden">
+            <h2>Just Vibes</h2>
+            <div class="video-item" onclick="playVideo('rileyb/favsongs/BS.mp4')">
+                <img src="rileyb/favsongs/BS.png" alt="Blank Space">
+                <p>Blank Space</p>
+            </div>
+        </div>
+        <div id="favsongs" class="video-section hidden">
+            <h2>Just Vibes</h2>
+            <div class="video-item" onclick="playVideo('rileyb/favsongs/BG.mp4')">
+                <img src="rileyb/favsongs/BG.png" alt="Beautiful Girls">
+                <p>Beautiful Girls</p>
+            </div>
+        </div>
+      
         <div id="videosmadebyriley" class="video-section hidden">
             <h2>Videos Published by Riley B</h2>
             <div class="video-item" onclick="playVideo('rileyb/luxuryg/luxuryg.mp4')">
@@ -78,67 +129,34 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>About rileyb.co.uk/music</h2>
-                <p>
-                    rileyb.co.uk/music is your go-to platform for watching and sharing your favorite videos across various genres. Tune in and enjoy the best content with a seamless experience!
-                </p>
-            </div>
-
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tunes</a></li>
-                    <li><a href="#">Rap</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section contact">
-                <h2>Contact Us</h2>
-                <p>Email: support@rileyb.co.uk</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 rileyb.co.uk | All rights reserved</p>
-        </div>
-    </footer>
-
-    <script>
-      function showSection(sectionId) {
-          // Hide all video sections
-          const sections = document.querySelectorAll('.video-section');
-          sections.forEach(section => {
-              section.classList.add('hidden');
-          });
-
-          // Show the selected section
-          const selectedSection = document.getElementById(sectionId);
-          if (selectedSection) {
-              selectedSection.classList.remove('hidden');
-          }
-      }
-
-      function playVideo(videoSrc) {
-          const videoPlayer = document.getElementById('video-player');
-          const videoElement = document.getElementById('video');
-
-          // Set the video source and show the player
-          videoElement.src = videoSrc;
-          videoPlayer.classList.remove('hidden');
-      }
-
-      function goBack() {
-          const videoPlayer = document.getElementById('video-player');
-          videoPlayer.classList.add('hidden');
-
-          // Stop the video
-          const videoElement = document.getElementById('video');
-          videoElement.pause();
-          videoElement.src = "";
-      }
-    </script>
+    <script src="script.js"></script>
 </body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About rileyb.co.uk/music</h2>
+            <p>
+                rileyb.co.uk/music is your go-to platform for watching and sharing your favorite videos across various genres. Tune in and enjoy the best content with a seamless experience!
+            </p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tunes</a></li>
+                <li><a href="#">Rap</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@rileyb.co.uk</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 rileyb.co.uk | All rights reserved</p>
+    </div>
+</footer>
 </html>
