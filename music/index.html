@@ -29,11 +29,23 @@
         </nav>
 
         <div id="tunes" class="video-section">
-            <!-- Tunes content -->
+            <div class="video-item" onclick="playVideo('tunes/meetmehalfway/meetmehalfway.mp4')">
+                <img src="tunes/meetmehalfway/meetmehalfway.png" alt="The Black Eyed Peas - Meet Me Halfway (Lyrics)">
+                <p>The Black Eyed Peas - Meet Me Halfway (Lyrics)</p>
+            </div>
+            <div class="video-item" onclick="playVideo('tunes/blame/blame.mp4')">
+                <img src="tunes/blame/blame.png" alt="Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵">
+                <p>Blame - Calvin Harris (Feat. John Newman) (Lyrics) 🎵</p>
+            </div>
+            <!-- Additional video items -->
         </div>
 
         <div id="rap" class="video-section hidden">
-            <!-- Rap content -->
+            <h2>Rap</h2>
+            <div class="video-item" onclick="playVideo('rap/cheersfortherosesthere/cheersfortherosesthere.mp4')">
+                <img src="rap/cheersfortherosesthere/cheersfortherosesthere.png" alt="Rap Video 1">
+                <p>Luke Bennett - Cheers For The Roses There</p>
+            </div>
         </div>
 
         <div id="favsongs1" class="video-section hidden">
@@ -50,30 +62,14 @@
                 <p>International Love</p>
             </div>
         </div>
-        <div id="favsongs3" class="video-section hidden">
-            <h2>Just Vibes</h2>
-            <div class="video-item" onclick="playVideo('rileyb/favsongs/NHMB.mp4')">
-                <img src="rileyb/favsongs/NHMB.png" alt="There's Nothing Holding Me Back">
-                <p>There's Nothing Holding Me Back</p>
-            </div>
-        </div>
-        <div id="favsongs4" class="video-section hidden">
-            <h2>Just Vibes</h2>
-            <div class="video-item" onclick="playVideo('rileyb/favsongs/BS.mp4')">
-                <img src="rileyb/favsongs/BS.png" alt="Blank Space">
-                <p>Blank Space</p>
-            </div>
-        </div>
-        <div id="favsongs5" class="video-section hidden">
-            <h2>Just Vibes</h2>
-            <div class="video-item" onclick="playVideo('rileyb/favsongs/BG.mp4')">
-                <img src="rileyb/favsongs/BG.png" alt="Beautiful Girls">
-                <p>Beautiful Girls</p>
-            </div>
-        </div>
-      
+        <!-- Add more sections here -->
+
         <div id="videosmadebyriley" class="video-section hidden">
-            <!-- Videos by Riley B content -->
+            <h2>Videos Published by Riley B</h2>
+            <div class="video-item" onclick="playVideo('rileyb/luxuryg/luxuryg.mp4')">
+                <img src="rileyb/luxuryg/luxuryg.png" alt="Luxury Gaming Roleplay Intro video">
+                <p>Luxury Gaming Roleplay Intro video</p>
+            </div>
         </div>
 
         <div id="video-player" class="hidden">
@@ -110,6 +106,39 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      function showSection(sectionId) {
+          // Hide all video sections
+          const sections = document.querySelectorAll('.video-section');
+          sections.forEach(section => {
+              section.classList.add('hidden');
+          });
+
+          // Show the selected section
+          const selectedSection = document.getElementById(sectionId);
+          if (selectedSection) {
+              selectedSection.classList.remove('hidden');
+          }
+      }
+
+      function playVideo(videoSrc) {
+          const videoPlayer = document.getElementById('video-player');
+          const videoElement = document.getElementById('video');
+
+          // Set the video source and show the player
+          videoElement.src = videoSrc;
+          videoPlayer.classList.remove('hidden');
+      }
+
+      function goBack() {
+          const videoPlayer = document.getElementById('video-player');
+          videoPlayer.classList.add('hidden');
+
+          // Stop the video
+          const videoElement = document.getElementById('video');
+          videoElement.pause();
+          videoElement.src = "";
+      }
+    </script>
 </body>
 </html>
